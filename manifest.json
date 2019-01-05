@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Pikabu: Video in comments",
+    "version": "0.3",
+	"web_accessible_resources":["*.css"],
+    "icons": {
+        "16": "./icon.png",
+        "32": "./icon.png",
+        "48": "./icon.png",
+        "128": "./icon.png"
+    },
+
+    "content_scripts":[{
+        "matches": [
+            "http://pikabu.ru/story/*",
+            "https://pikabu.ru/story/*",
+            "https://pikabu.ru/answers*",
+            "https://pikabu.ru/comments*"
+        ],
+        "js": [
+			"pikabu.js"
+        ]
+
+    }],
+
+    "browser_action": {
+        "default_title": "Pikabu: Video in comments ",
+        "default_icon" : "./icon.png"
+    }
+	
+}
